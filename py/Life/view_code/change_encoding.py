@@ -8,7 +8,7 @@ from py.Tools.PrintPercent import PrintPercent
 
 # ----------------------运行前需要设置的变量---------------------
 # 文件夹
-folder = 'E:\\Learn\\LearnDirectX\\Notes'
+folder = 'E:\\Learn\\GASDoc'
 # 要修改编码的文件类型
 file_types = ['.cpp', '.h', '.c', '.cs', '.txt', '.md']
 # file_types = ['.txt']

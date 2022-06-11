@@ -46,8 +46,8 @@ class Crawler:
         link_prefix = line_base['href']
 
         line_arr = soup.find_all('a',
-                                 href=re.compile('^html_data/'),
-                                 text=re.compile(r'^\[[0-9][0-9]\.[0-9][0-9]].*(合集|專輯|大杂烩)'))
+                                 # href=re.compile('^html_data/'),
+                                 text=re.compile(r'^.*\[[0-9][0-9]\.[0-9][0-9]].*'))
         for line in line_arr:
             t_resource = Resource(line.get_text(), link_prefix + line.attrs['href'])
             self.resource_arr.append(t_resource)
@@ -79,9 +79,9 @@ class Crawler:
         print(Fore.YELLOW, '资源总数:{}, 国产:{}, 日本:{}, 欧美:{}, 动画:{}'
               .format(len(self.resource_arr), chinese_num, japanese_num, western_num, anim_num))
 
-    def open_link_by_filter(self, in_page, in_open_num, in_filter=''):
+    def open_link_by_filter(self, in_page, in_open_num, in_filter='', b_print_detail=False):
         """打开指定页面的链接,传入筛选字符串"""
-        self.get_data_by_page(in_page)
+        self.get_data_by_page(in_page, b_print_detail)
         t_open_num = min(in_open_num, len(self.resource_arr))
         t_num = 0
         for item in self.resource_arr:

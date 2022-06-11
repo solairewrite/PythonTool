@@ -21,6 +21,8 @@ page_num = 5  # 打开多少页(按搜索字符)
 start_index = 50  # 打开链接的开始索引
 open_link_num = 10  # 打开链接的数量
 filter_str = '▲老含及▲欧美無码合集'  # 筛选字符串
+# filter_str = '動漫'  # 筛选字符串
+# filter_str = '動漫'  # 筛选字符串
 
 
 def main():
@@ -32,7 +34,7 @@ def main():
     elif link_mode == LinkMode.OPEN_BY_STR:
         for i in range(page_start, page_start + page_num):
             global filter_str
-            crawler.open_link_by_filter(i, open_link_num, filter_str)
+            crawler.open_link_by_filter(i, open_link_num, filter_str, False)
 
     else:
         crawler.get_data_by_page(page_start, True)
