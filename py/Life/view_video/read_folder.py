@@ -8,13 +8,13 @@ import random
 
 # -------------------- 运行前设置的变量 -----------------------
 # 要读取的根目录
-path = 'D:\\porn'
+path = 'E:\\porn'
 # 一个文件夹下最多有多少个文件
 max_num = 20
 # 视频类型
 video_types = ['.mp4', '.mkv', '.avi', '.MP4', '.mpg']
 # 忽略的文件夹
-ignore_folders = ['marc dorcel 01', 'marc dorcel 02', 'SM 01']
+ignore_folders = ['marc dorcel 01', 'marc dorcel 02', 'SM 01', 'anim 01']
 
 # -------------------- 全局变量 -----------------------
 # 根目录下的所有文件
