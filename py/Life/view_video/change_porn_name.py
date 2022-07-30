@@ -7,10 +7,15 @@ from colorama import init, Fore
 from enum import Enum
 
 # -------------------- 运行前设置的变量 -----------------------
-path = 'E:\\porn\\1'
-delete_starts = ['HD-', 'zzpp08.com@', 'avmans.com-', 'kpkp3.com_', 'kpkp56.com-']
-delete_ends = ['_CH_HD', '_FHD_CH', '_CH_SD', '_C', '_Uncen', '_2K']
-only_see_no_modify = 1
+path = 'E:\\porn\\20'
+only_see_no_modify = 0
+delete_starts = [
+    'HD-', 'zzpp08.com@', 'avmans.com-', 'kpkp3.com_', 'kpkp56.com-',
+    '8899xx.xyz_', '@蜂鳥@FENGNIAO-151.VIP-'
+]
+delete_ends = [
+    '_CH_HD', '_FHD_CH', '_CH_SD', '_C', '_Uncen', '_2K', 'ch', '-HD'
+]
 
 # -------------------- 缓存变量 -----------------------
 files = list()
