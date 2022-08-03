@@ -11,7 +11,7 @@ from video_types import video_types
 # 要读取的根目录
 path = 'E:\\porn'
 # 一个文件夹下最多有多少个文件
-max_num = 20
+max_num = 30
 # 忽略的文件夹
 ignore_folders = ['marc dorcel 01', 'marc dorcel 02', 'SM 01', 'anim 01']
 

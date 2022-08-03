@@ -11,10 +11,12 @@ path = 'E:\\porn\\20'
 only_see_no_modify = 0
 delete_starts = [
     'HD-', 'zzpp08.com@', 'avmans.com-', 'kpkp3.com_', 'kpkp56.com-',
-    '8899xx.xyz_', '@蜂鳥@FENGNIAO-151.VIP-'
+    '8899xx.xyz_', '@蜂鳥@FENGNIAO-151.VIP-', 'avmans.com_', 'HD_',
+    'hhd800.com@', 'zzpp01.com@'
 ]
 delete_ends = [
-    '_CH_HD', '_FHD_CH', '_CH_SD', '_C', '_Uncen', '_2K', 'ch', '-HD'
+    '_CH_HD', '_FHD_CH', '_CH_SD', '_C', '_Uncen', '_2K', '_ch', 'ch',
+    '-HD', '_', '.'
 ]
 
 # -------------------- 缓存变量 -----------------------

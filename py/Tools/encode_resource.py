@@ -7,7 +7,7 @@ import base64
 import os
 
 # pyinstaller打包的.py文件的路径
-py = '../Life/Crawler.py'
+py = '../Life/open_1024.py'
 # py = '../Test.py'
 # 资源路径
 resource = '../../Resource/girl.ico'
