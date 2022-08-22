@@ -22,7 +22,8 @@ page_num = 5  # 打开多少页(按搜索字符)
 open_types = [PornType.Japan, PornType.USA, PornType.Anim]  # 打开哪些类型
 start_index = 50  # 打开链接的开始索引
 open_link_num = 10  # 打开链接的数量
-filter_str = '▲老含及▲欧美無码合集'  # 筛选字符串
+# filter_str = '▲老含及▲欧美無码合集'  # 筛选字符串
+filter_str = '动'  # 筛选字符串
 
 
 def main():

@@ -13,7 +13,7 @@ path = 'E:\\porn'
 # 一个文件夹下最多有多少个文件
 max_num = 30
 # 忽略的文件夹
-ignore_folders = ['marc dorcel 01', 'marc dorcel 02', 'SM 01', 'anim 01']
+ignore_folders = ['marc dorcel 01', 'marc dorcel 02', 'SM 01', 'SM 02', 'anim 01']
 
 # -------------------- 全局变量 -----------------------
 # 根目录下的所有文件
