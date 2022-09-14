@@ -18,8 +18,9 @@ class LinkMode(Enum):
 url = 'https://a227h.xyz/pw/thread.php?fid=3'
 link_mode = LinkMode.OPEN_BY_TYPE  # 打开链接的模式
 page_start = 1  # 打开第几页,从1开始
-page_num = 5  # 打开多少页(按搜索字符)
-open_types = [PornType.Japan, PornType.USA, PornType.Anim]  # 打开哪些类型
+page_num = 1  # 打开多少页
+# open_types = [PornType.Japan, PornType.USA, PornType.Anim]  # 打开哪些类型
+open_types = [PornType.Japan]  # 打开哪些类型
 start_index = 50  # 打开链接的开始索引
 open_link_num = 10  # 打开链接的数量
 # filter_str = '▲老含及▲欧美無码合集'  # 筛选字符串
@@ -37,11 +38,12 @@ def main():
             global filter_str
             crawler.open_link_by_filter(i, open_link_num, filter_str, False)
 
+    elif link_mode == LinkMode.OPEN_BY_TYPE:
+        for i in range(page_start, page_start + page_num):
+            crawler.open_link_by_type(i, open_types)
+
     elif link_mode == LinkMode.NOT_OPEN:
         crawler.get_data_by_page(page_start, True)
-
-    elif link_mode == LinkMode.OPEN_BY_TYPE:
-        crawler.open_link_by_type(page_start, open_types)
 
 
 if __name__ == '__main__':

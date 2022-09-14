@@ -1,22 +1,26 @@
 # Author        : jizhixin
 # Date          : 2022-07-29
-# Description   : 修改文件夹内porn的文件名
+# Description   : 格式化文件夹内porn的文件名
 
 import os
 from colorama import init, Fore
 from enum import Enum
 
 # -------------------- 运行前设置的变量 -----------------------
-path = 'E:\\porn\\20'
+path = 'E:\\porn\\17'
 only_see_no_modify = 0
 delete_starts = [
     'HD-', 'zzpp08.com@', 'avmans.com-', 'kpkp3.com_', 'kpkp56.com-',
     '8899xx.xyz_', '@蜂鳥@FENGNIAO-151.VIP-', 'avmans.com_', 'HD_',
-    'hhd800.com@', 'zzpp01.com@', 'kckc-11.com@'
+    'hhd800.com@', 'zzpp01.com@', 'kckc-11.com@', 'freedl.org@',
+    'kckc11.com@', 'rh2048.com@', 'kckc13.com@', 'kpkp69.com-',
+    '[zzpp03.com]-', '@扶摇小飞鼠_', 'Woxav.Com@', 'zzpp06.com@',
+    '[Xav-1.Xyz]', '[44x.me]', 'jav20s8.com@'
 ]
 delete_ends = [
-    '_CH_HD', '_FHD_CH', '_CH_SD', '_C', '_Uncen', '_2K', '_ch', 'ch',
-    '-HD', '_', '.', '_HD_CH'
+    '_60fps_CH_HD', '_CH_HD', '_FHD_CH', '_CH_SD', '_C', '_Uncen', '_2K', '_ch',
+    '-HD', '_', '.', '_HD_CH', '-FHD', '-C', 'c', '~nyap2p.com', 'ch',
+    '_CH-nyap2p.com'
 ]
 
 # -------------------- 缓存变量 -----------------------

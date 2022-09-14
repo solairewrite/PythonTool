@@ -1,6 +1,8 @@
 # Author        : jizhixin
 # Date          : 2022-08-09
-# Description   : 修改动画文件夹内porn的文件名
+# Description   : 将动画的名字重命名为它所在的文件夹的名字
+# E:\Porn\anim 01\HAC2145 虚假的寝取 02\HAC2145.MP4
+# E:\Porn\anim 01\HAC2145 虚假的寝取 02.MP4
 
 import os
 from colorama import init, Fore
@@ -8,7 +10,7 @@ from video_types import video_types
 
 # -------------------- 运行前设置的变量 -----------------------
 # 要读取的根目录
-folder = 'E:\\porn\\anim 01'
+folder = 'E:\\porn\\20'
 b_only_print_no_change = 0
 
 

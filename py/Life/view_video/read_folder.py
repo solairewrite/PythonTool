@@ -1,7 +1,7 @@
 # Author        : Zhixin.Ji
 # Date          : 2020-07-04
-# Description   : 读取文件夹内的所有文件
-# TODO: 处理不是视频的文件类型,忽略的文件夹排序
+# Description   : 读取文件夹内的所有文件,随机重新分配到子文件夹中
+
 import os
 from colorama import init, Fore
 import random
@@ -13,7 +13,11 @@ path = 'E:\\porn'
 # 一个文件夹下最多有多少个文件
 max_num = 30
 # 忽略的文件夹
-ignore_folders = ['marc dorcel 01', 'marc dorcel 02', 'SM 01', 'SM 02', 'anim 01']
+ignore_folders = [
+    'marc dorcel 01', 'marc dorcel 02', 'USA 01', 'USA 02',
+    'SM 01', 'SM 02',
+    'anim 01'
+]
 
 # -------------------- 全局变量 -----------------------
 # 根目录下的所有文件
