@@ -8,7 +8,7 @@ from video_types import video_types, is_video, not_video_types
 
 # -------------------- 运行前设置的变量 -----------------------
 # 要读取的根目录
-folder = 'E:\\porn\\27'
+folder = 'E:\\porn\\28'
 b_delete_none_video = 0
 
 # -------------------- 缓存变量 -----------------------

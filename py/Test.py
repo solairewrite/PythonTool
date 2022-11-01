@@ -1,5 +1,6 @@
 import os
 from colorama import init, Fore
+from zhconv import convert
 
 folder = 'E:\\Porn\\23'
 
@@ -18,6 +19,13 @@ def read_folder(inpath):
             os.rename(sub_path, new_path)
 
 
+def test_zhconv():
+    fanti = '廣瀨雛'
+    jianti = convert(fanti, 'zh-cn')
+    print(jianti)
+
+
 if __name__ == '__main__':
     init(autoreset=True)
-    read_folder(folder)
+    # read_folder(folder)
+    test_zhconv()

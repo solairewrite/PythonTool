@@ -7,7 +7,7 @@ from colorama import init, Fore
 from enum import Enum
 
 # -------------------- 运行前设置的变量 -----------------------
-path = 'E:\\porn\\27'
+path = 'E:\\porn\\28'
 only_see_no_modify = 0
 delete_starts = [
     'HD-', 'zzpp08.com@', 'avmans.com-', 'kpkp3.com_', 'kpkp56.com-',
@@ -23,7 +23,8 @@ delete_starts = [
 delete_ends = [
     '_60fps_CH_HD', '_CH_HD', '_FHD_CH', '_CH_SD', '_C', '_Uncen', '_2K', '_ch',
     '-HD', '_', '.', '_HD_CH', '-FHD', '-C', 'c', '~nyap2p.com', 'ch',
-    '_CH-nyap2p.com', '.SD', '(Uncensored Leaked)','-uncensored-nyap2p.com'
+    '_CH-nyap2p.com', '.SD', '(Uncensored Leaked)', '-uncensored-nyap2p.com',
+    '-uncensored'
 ]
 
 # -------------------- 缓存变量 -----------------------
@@ -43,7 +44,8 @@ def read_folder():
     global files
     for item in os.listdir(path):
         sub_path = os.path.join(path, item)
-        files.append(sub_path)
+        if os.path.isfile(sub_path):
+            files.append(sub_path)
 
 
 def delete_start_str(instr):
