@@ -4,7 +4,7 @@
 
 import os
 from colorama import init, Fore
-from video_types import video_types, is_video, not_video_types
+from porn_tool import is_video_fullpath, not_video_types
 
 # -------------------- 运行前设置的变量 -----------------------
 # 要读取的根目录
@@ -29,7 +29,7 @@ def read_folder(infolder):
 
 def move_porn_to_root_folder():
     for fullpath in files:
-        b_video = is_video(fullpath)
+        b_video = is_video_fullpath(fullpath)
         color = Fore.YELLOW if b_video else ''
         print(color + fullpath, end='')
 

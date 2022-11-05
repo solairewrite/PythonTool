@@ -4,7 +4,6 @@
 
 import os
 from colorama import init, Fore
-from video_types import av_actress_names
 
 folder = 'E:\\Porn\\24'
 

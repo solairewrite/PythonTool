@@ -1,6 +1,6 @@
 # Author        : jizhixin
 # Date          : 2022-11-02
-# Description   : 根据番号抓取av女忧的名字,并更新porn文件名
+# Description   : 从包含番号和av女忧名字的txt中,根据番号抓取av女忧的名字,并更新porn文件名
 
 import os
 from colorama import init, Fore
