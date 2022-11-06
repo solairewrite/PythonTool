@@ -8,7 +8,8 @@ from porn_tool import is_video_fullpath, not_video_types
 
 # -------------------- 运行前设置的变量 -----------------------
 # 要读取的根目录
-folder = 'E:\\porn\\28'
+folder = 'E:\\porn\\29'
+b_only_see_no_modify = 0
 b_delete_none_video = 0
 
 # -------------------- 缓存变量 -----------------------
@@ -38,7 +39,8 @@ def move_porn_to_root_folder():
             new_path = os.path.join(folder, filename)
             print()
             print(Fore.CYAN + new_path)
-            os.rename(fullpath, new_path)
+            if not b_only_see_no_modify:
+                os.rename(fullpath, new_path)
         print()
 
 
