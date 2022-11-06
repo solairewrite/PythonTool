@@ -1,10 +1,10 @@
 # Author        : jizhixin
 # Date          : 2022-11-05
-# Description   : 打开包含番号的txt文件,打开TorrentKitty网页,搜索所有番号
+# Description   : 打开包含番号的txt文件,打开TorrentKitty网页,搜索所有番号,已下载的不再下载
 
 import os
 from colorama import init, Fore
-from porn_tool import get_porn_number
+from porn_tool import get_porn_number, get_all_folder_porn_number
 import chardet
 import webbrowser
 
@@ -15,6 +15,7 @@ torrent_kitty_url = 'https://torrentkitty.se/search/'
 
 # 打开包含番号的txt文件,打开TorrentKitty网页,搜索所有番号
 def open_av_links(txt_path):
+    all_numbers = get_all_folder_porn_number()
     with open(txt_path, 'rb') as tfile:
         tencoding = chardet.detect(tfile.read())['encoding']
     with open(txt_path, 'r', encoding=tencoding, errors='ignore') as tfile:
@@ -22,9 +23,12 @@ def open_av_links(txt_path):
             line = line.strip()
             porn_number = get_porn_number(line)
             if porn_number:
-                # print(porn_number)
-                search_url = torrent_kitty_url + porn_number + '/'
-                webbrowser.open_new_tab(search_url)
+                if porn_number in all_numbers:
+                    print(Fore.RED + '已下载: {}'.format(porn_number))
+                else:
+                    # print(porn_number)
+                    search_url = torrent_kitty_url + porn_number + '/'
+                    # webbrowser.open_new_tab(search_url)
 
 
 if __name__ == '__main__':
