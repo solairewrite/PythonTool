@@ -10,7 +10,7 @@ from zhconv import convert
 from porn_tool import porn_pattern
 
 # -------------------- 运行前设置的变量 -----------------------
-path = 'E:\\porn\\29'
+path = 'E:\\porn\\34'
 filepath_with_actress = 'C:\\Users\\jizhixin\\Desktop\\AV.txt'
 only_see_no_modify = 0
 
@@ -38,13 +38,13 @@ def read_file_with_actress():
         for line in tfile:
             line_index += 1
             line = line.strip().strip('=').strip('-').strip('!')
-            if re.match(porn_pattern, line):
-                if line_index < 15:
-                    line += ' {}'.format('纱纱原百合')
-                else:
-                    line += ' {}'.format('麻里梨夏')
-                # print(Fore.CYAN + '{0} {1}'.format(str(line_index).ljust(3), line))
-                actress_names.append(line)
+            # if re.match(porn_pattern, line):
+            #     if line_index < 15:
+            #         line += ' {}'.format('纱纱原百合')
+            #     else:
+            #         line += ' {}'.format('麻里梨夏')
+            # print(Fore.CYAN + '{0} {1}'.format(str(line_index).ljust(3), line))
+            actress_names.append(line)
 
 
 def get_name_with_av_actress(old_name):

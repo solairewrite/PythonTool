@@ -1,6 +1,6 @@
 # Author        : jizhixin
 # Date          : 2022-07-29
-# Description   : 格式化文件夹内porn的文件名
+# Description   : 格式化文件夹内porn视频的文件名,已忽略文件夹
 
 import os
 from colorama import init, Fore
@@ -9,27 +9,29 @@ from porn_tool import redirect_av_actress_name
 from zhconv import convert
 
 # -------------------- 运行前设置的变量 -----------------------
-folder = 'E:\\porn\\1'
-only_see_no_modify = 1
+folder = 'E:\\porn\\35'
+only_see_no_modify = 0
 # 只打印有修改的名字
 only_print_change_name = 0
 delete_starts = [
-    'HD-', 'zzpp08.com@', 'avmans.com-', 'kpkp3.com_', 'kpkp56.com-',
+    'rh2048.com@', 'HD-', 'zzpp08.com@', 'avmans.com-', 'kpkp3.com_', 'kpkp56.com-',
     '8899xx.xyz_', '@蜂鳥@FENGNIAO-151.VIP-', 'avmans.com_', 'HD_',
     'hhd800.com@', 'zzpp01.com@', 'kckc-11.com@', 'freedl.org@',
-    'kckc11.com@', 'rh2048.com@', 'kckc13.com@', 'kpkp69.com-',
+    'kckc11.com@', 'kckc13.com@', 'kpkp69.com-',
     '[zzpp03.com]-', '@扶摇小飞鼠_', 'Woxav.Com@', 'zzpp06.com@',
     '[Xav-1.Xyz]', '[44x.me]', 'jav20s8.com@', '(無修正-流出) ',
     'bbsxv.xyz-', 'kckc14.com@', 'kpkp69.com_', 'javsubs91@',
     'kckc12.com@', 'kpkp3.com-', 'zzpp01.com_', '[Xavs1.Xyz]', 'JAVZIP.NET-',
     '[Xav-3.Xyz]', 'PP168.CC-', 'kckc16.com@', 'PP168.cc-', 'kckc17.com@',
-    'aavv121.com@', 'taxv.xyz-', 'zzpp03.com-', '[Woxav.Com]', '[XavLt.Com]'
+    'aavv121.com@', 'taxv.xyz-', 'zzpp03.com-', '[Woxav.Com]', '[XavLt.Com]',
+    '2048论坛@big2048.com -', '@蜂鳥@FENGNIAO131.VIP-', '18bt.net_',
+    'freedl.org@', 'aavv333.com@'
 ]
 delete_ends = [
     '_60fps_CH_HD', '_CH_HD', '_FHD_CH', '_CH_SD', '_C', '_Uncen', '_2K', '_ch',
     '-HD', '_', '.', '_HD_CH', '-FHD', '-C', 'c', '~nyap2p.com', 'ch',
     '_CH-nyap2p.com', '.SD', '(Uncensored Leaked)', '-uncensored-nyap2p.com',
-    '-uncensored'
+    '-uncensored', '.HD'
 ]
 
 # -------------------- 缓存变量 -----------------------
@@ -56,14 +58,14 @@ def read_folder(infolder):
 def delete_start_str(instr):
     for delstr in delete_starts:
         if instr.startswith(delstr):
-            instr = instr.lstrip(delstr)
+            instr = str(instr).removeprefix(delstr)
     return instr
 
 
 def delete_end_str(instr):
     for delstr in delete_ends:
         if instr.endswith(delstr):
-            instr = instr.rstrip(delstr)
+            instr = instr.removesuffix(delstr)
     return instr
 
 

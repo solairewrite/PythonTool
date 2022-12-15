@@ -1,6 +1,6 @@
 # Author        : jizhixin
 # Date          : 2022-07-29
-# Description   : 将一个文件夹下的,所有子文件夹内的porn移动到根目录
+# Description   : 将一个文件夹下的,所有子文件夹内的porn移动到根目录,忽略迅雷正在下载的视频
 
 import os
 from colorama import init, Fore
@@ -8,7 +8,7 @@ from porn_tool import is_video_fullpath, not_video_types
 
 # -------------------- 运行前设置的变量 -----------------------
 # 要读取的根目录
-folder = 'E:\\porn\\29'
+folder = 'E:\\porn\\35'
 b_only_see_no_modify = 0
 b_delete_none_video = 0
 
