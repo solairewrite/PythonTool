@@ -9,11 +9,10 @@ import chardet
 import webbrowser
 
 av_txt = 'C:\\Users\\jizhixin\\Desktop\\AV.txt'
-# https://torrentkitty.se/search/SHKD-997/
 torrent_kitty_url = 'https://torrentkitty.se/search/'
 
 start_line = 0  # AV.txt打开网页的起始行数
-end_line = 30
+end_line = 30  # 包含行号为end_line的这一行
 
 
 # 打开包含番号的txt文件,打开TorrentKitty网页,搜索所有番号
@@ -24,6 +23,7 @@ def open_av_links(txt_path):
     with open(txt_path, 'r', encoding=tencoding, errors='ignore') as tfile:
         for index, line in enumerate(tfile):
             if start_line <= index < end_line:
+                # print(str(index) + ' ' + line, end='')
                 line = line.strip()
                 porn_number = get_porn_number(line)
                 if porn_number:

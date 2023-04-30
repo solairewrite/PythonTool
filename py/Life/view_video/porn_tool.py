@@ -6,7 +6,9 @@ import os
 from colorama import init, Fore
 import re
 
-test_folder = 'E:\\Porn\\2'
+porn_root_folder = 'F:\\Porn'
+
+test_folder = os.path.join(porn_root_folder, '2')
 test_name = 'ABP-989 小女人'
 
 video_types = ['.mp4', '.mkv', '.avi', '.MP4', '.mpg', '.wmv']
@@ -37,8 +39,8 @@ change_names = {
     '本庄玲': '本庄铃', '小湊よつ葉': '小凑四叶', '安齋拉拉': '安斋拉拉', '恋渕ももな': '恋渊桃菜',
     '凉森玲梦': '凉森铃梦', '松本いちか': '松本一香', '牧野みおな': '牧野未央奈',
     '紗倉まな': '纱仓真菜', 'julia': 'Julia', '名里紬': '明里紬', '鈴村あいり': '铃村爱里',
-    '塩見彩': '盐见彩', '新有菜': '桥本有菜', '蝶花恋': '楪花恋', '神納花': '神纳花',
-    '广濑雏': '广濑雏', '七泽米亚': '七泽美亚', '神木麗': '神木丽', '白桃はな': '白桃花',
+    '塩見彩': '盐见彩', '新有菜': '桥本有菜', '蝶花恋': '楪可怜', '楪花恋': '楪可怜',
+    '七泽米亚': '七泽美亚', '神木麗': '神木丽', '白桃はな': '白桃花', '神納花': '神纳花',
     '大槻ひびき': '大槻响', '愛乃娜美': '爱乃娜美', '小宵こなん': '小宵虎南', 'RION': 'Rion',
     '藤井いよな': '藤井一夜', '宮下玲奈': '宫下玲奈',
 }
@@ -91,7 +93,7 @@ def get_folder_porn_number(path, inlist):
 
 # 获取porn文件夹下所有日本文件夹下的番号
 def get_all_folder_porn_number():
-    root_folder = 'E:\\Porn'
+    root_folder = porn_root_folder
     all_porn_numbers = list()
 
     for sub_folder_name in os.listdir(root_folder):

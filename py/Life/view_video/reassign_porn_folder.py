@@ -5,11 +5,11 @@
 import os
 from colorama import init, Fore
 import random
-from porn_tool import video_types
+from porn_tool import video_types, porn_root_folder
 
 # -------------------- 运行前设置的变量 -----------------------
 # 要读取的根目录
-path = 'E:\\porn'
+path = porn_root_folder
 # 一个文件夹下最多有多少个文件
 max_num = 30
 # 忽略的文件夹

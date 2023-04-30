@@ -4,8 +4,9 @@
 
 import os
 from colorama import init, Fore
+from porn_tool import porn_root_folder
 
-folder = 'E:\\Porn\\24'
+folder = os.path.join(porn_root_folder, '24')
 
 
 def read_folder(inpath):

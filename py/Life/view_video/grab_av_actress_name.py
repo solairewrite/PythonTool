@@ -7,10 +7,10 @@ from colorama import init, Fore
 import chardet
 import re
 from zhconv import convert
-from porn_tool import porn_pattern
+from porn_tool import porn_pattern, porn_root_folder
 
 # -------------------- 运行前设置的变量 -----------------------
-path = 'E:\\porn\\34'
+path = folder = os.path.join(porn_root_folder, '51')
 filepath_with_actress = 'C:\\Users\\jizhixin\\Desktop\\AV.txt'
 only_see_no_modify = 0
 
@@ -55,6 +55,7 @@ def get_name_with_av_actress(old_name):
             her_name = actress.replace(old_name, '')
             # 繁体转简体
             her_name = convert(her_name, 'zh-cn')
+            her_name = her_name.strip()
             return old_name + ' ' + her_name
     return old_name
 

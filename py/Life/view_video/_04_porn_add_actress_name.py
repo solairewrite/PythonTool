@@ -2,10 +2,10 @@ import os
 from colorama import init, Fore
 from py.Life.view_video.porn_tool import is_video_fullname, porn_root_folder
 
-folder = os.path.join(porn_root_folder, '58')
+folder = os.path.join(porn_root_folder, '59')
 
 bModify = 1
-actress_name = '白峰美羽'
+actress_name = '上原亚衣'
 
 
 def read_folder(inpath):

@@ -159,4 +159,5 @@ class Read1024:
         for porn_type in types:
             for resource in self.resource_arr:
                 if resource.type == porn_type:
+                    print(resource.link)
                     webbrowser.open_new_tab(resource.link)

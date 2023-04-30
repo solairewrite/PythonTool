@@ -5,11 +5,11 @@
 import os
 from colorama import init, Fore
 from enum import Enum
-from porn_tool import redirect_av_actress_name
+from porn_tool import redirect_av_actress_name, is_video_fullname, porn_root_folder
 from zhconv import convert
 
 # -------------------- 运行前设置的变量 -----------------------
-folder = 'E:\\porn\\35'
+folder = os.path.join(porn_root_folder, '60')
 only_see_no_modify = 0
 # 只打印有修改的名字
 only_print_change_name = 0
@@ -25,13 +25,14 @@ delete_starts = [
     '[Xav-3.Xyz]', 'PP168.CC-', 'kckc16.com@', 'PP168.cc-', 'kckc17.com@',
     'aavv121.com@', 'taxv.xyz-', 'zzpp03.com-', '[Woxav.Com]', '[XavLt.Com]',
     '2048论坛@big2048.com -', '@蜂鳥@FENGNIAO131.VIP-', '18bt.net_',
-    'freedl.org@', 'aavv333.com@'
+    'freedl.org@', 'aavv333.com@', 'AVAV-66.XYZ@', 'XAVLT.COM@',
+    'AVAV-55.XYZ@', 'avav66.xyz@', 'avav55.xyz@', 'avav77.xyz@'
 ]
 delete_ends = [
     '_60fps_CH_HD', '_CH_HD', '_FHD_CH', '_CH_SD', '_C', '_Uncen', '_2K', '_ch',
     '-HD', '_', '.', '_HD_CH', '-FHD', '-C', 'c', '~nyap2p.com', 'ch',
     '_CH-nyap2p.com', '.SD', '(Uncensored Leaked)', '-uncensored-nyap2p.com',
-    '-uncensored', '.HD'
+    '-uncensored', '.HD', '_1080'
 ]
 
 # -------------------- 缓存变量 -----------------------
@@ -122,6 +123,9 @@ def change_porn_names(infolder):
         if i <= -20:
             continue
         filename = os.path.split(fullpath)[1]
+        if not is_video_fullname(filename):
+            continue
+
         # real_name: ABP-747, file_type: .mp4
         old_name, file_type = os.path.splitext(filename)
         new_name = get_formatted_name(old_name)

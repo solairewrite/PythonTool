@@ -6,11 +6,11 @@
 
 import os
 from colorama import init, Fore
-from porn_tool import video_types
+from porn_tool import video_types, porn_root_folder
 
 # -------------------- 运行前设置的变量 -----------------------
 # 要读取的根目录
-folder = 'E:\\porn\\20'
+folder = folder = path = folder = os.path.join(porn_root_folder, '20')
 b_only_print_no_change = 0
 
 
