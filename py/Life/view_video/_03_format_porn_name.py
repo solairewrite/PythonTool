@@ -9,7 +9,7 @@ from porn_tool import redirect_av_actress_name, is_video_fullname, porn_root_fol
 from zhconv import convert
 
 # -------------------- 运行前设置的变量 -----------------------
-folder = os.path.join(porn_root_folder, '60')
+folder = os.path.join(porn_root_folder, '64')
 only_see_no_modify = 0
 # 只打印有修改的名字
 only_print_change_name = 0
@@ -26,7 +26,7 @@ delete_starts = [
     'aavv121.com@', 'taxv.xyz-', 'zzpp03.com-', '[Woxav.Com]', '[XavLt.Com]',
     '2048论坛@big2048.com -', '@蜂鳥@FENGNIAO131.VIP-', '18bt.net_',
     'freedl.org@', 'aavv333.com@', 'AVAV-66.XYZ@', 'XAVLT.COM@',
-    'AVAV-55.XYZ@', 'avav66.xyz@', 'avav55.xyz@', 'avav77.xyz@'
+    'AVAV-55.XYZ@', 'avav66.xyz@', 'avav55.xyz@', 'avav77.xyz@', 'avav77.xyz'
 ]
 delete_ends = [
     '_60fps_CH_HD', '_CH_HD', '_FHD_CH', '_CH_SD', '_C', '_Uncen', '_2K', '_ch',
