@@ -9,7 +9,7 @@ from porn_tool import redirect_av_actress_name, is_video_fullname, porn_root_fol
 from zhconv import convert
 
 # -------------------- 运行前设置的变量 -----------------------
-folder = os.path.join(porn_root_folder, '64')
+folder = os.path.join(porn_root_folder, '65')
 only_see_no_modify = 0
 # 只打印有修改的名字
 only_print_change_name = 0

@@ -5,7 +5,7 @@
 import os
 from colorama import init, Fore
 
-folder = 'E:\\movie\\生活大爆炸 第八季'
+folder = 'E:\\movie\\生活大爆炸 第九季'
 
 bModify = 1
 
@@ -22,7 +22,7 @@ def read_folder(inpath):
             filename, end = os.path.splitext(item)
             num = index + 0
             episode = num + 1 < 10 and '0' + str(num + 1) or str(num + 1)
-            filename = '生活大爆炸 S08 E{0}'.format(episode)
+            filename = '生活大爆炸 S09 E{0}'.format(episode)
             new_path = folder + '\\' + filename + end
             print(color + '{} {} -> {}'.format(str(index).ljust(3), sub_path.ljust(30), new_path))
             if bModify:

@@ -122,6 +122,37 @@ def redirect_av_actress_name(av_name):
     return av_name
 
 
+# 获取一个文件夹下所有指定女优视频的路径
+def get_folder_all_actress_path(folder, inlist, actress_name):
+    for fullname in os.listdir(folder):
+        if is_video_fullname(fullname):
+            if actress_name in fullname:
+                inlist.append(os.path.join(folder, fullname))
+
+
+# 获取porn文件夹下所有指定女优视频的路径
+def get_all_folder_actress_path(actress_name):
+    root_folder = porn_root_folder
+    paths = list()
+
+    for sub_folder_name in os.listdir(root_folder):
+        if not sub_folder_name.startswith('Anim') \
+                and not sub_folder_name.startswith('USA') \
+                and not sub_folder_name.startswith('SM'):
+            sub_folder = os.path.join(root_folder, sub_folder_name)
+            if os.path.isdir(sub_folder):
+                get_folder_all_actress_path(sub_folder, paths, actress_name)
+
+    # print(Fore.YELLOW + '番号数量: {0}'.format(len(paths)))
+    # for i, item in enumerate(paths):
+    #     count = i + 1
+    #     print('{} {}'.format(str(count).ljust(5), item))
+    #     if count % 10 == 0:
+    #         print()
+
+    return paths
+
+
 if __name__ == '__main__':
     init(autoreset=True)
     get_all_folder_porn_number()

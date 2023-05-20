@@ -9,7 +9,7 @@ import shutil
 
 # -------------------- 运行前设置的变量 -----------------------
 # 要读取的根目录
-folder = os.path.join(porn_root_folder, '63')
+folder = os.path.join(porn_root_folder, '65')
 b_only_see_no_modify = 0
 # 小于此大小MB的文件夹才会被删除
 max_folder_size = 3
