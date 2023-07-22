@@ -7,24 +7,34 @@ from colorama import init, Fore
 from porn_tool import porn_root_folder, get_all_folder_actress_path
 
 # 女优名字
-actress_name = '凉森铃梦'
-# 移动到哪个文件夹
-target_folder = '66'
+actress_names = [
+    '吉高宁宁', '桥本有菜', '有坂深雪', '楪可怜', '樱空桃', '凉森铃梦', '藤森里穗', '白石茉莉奈', '神宫寺奈绪',
+    '美谷朱里',
+    '河北彩花', '相泽南', '新村朱里', '深田咏美', '铃村爱里', '七森莉莉', '山岸逢花', '水川堇', '夏目彩春', '小蕾',
+    '纱纱原百合', '爱弓凉', '桃乃木香奈', '小松杏', '横宫七海', '向井蓝', '神木丽', '石川澪', '坂道美琉', '七泽美亚',
+    '松本一香', '神菜美舞', '日泉舞香', '水卜樱', '梦乃爱华', '天使萌', '枫花恋', '麻里梨夏', '沙月芽衣', '白桃花',
+    '八卦海', '希岛爱理', '土屋奏', '神乐爱音', '永野一夏', '小宵虎南', '结城梨乃',
+]
 b_only_see_no_modify = 0
 
 
 # 将同一个女优的片子移到一个文件夹下
-def move_actress_to_folder():
-    old_paths = get_all_folder_actress_path(actress_name)
+def move_actress_to_folder(in_actress_name):
+    old_paths = get_all_folder_actress_path(in_actress_name)
 
+    target_folder = in_actress_name
     new_folder = os.path.join(porn_root_folder, target_folder)
     if not os.path.isdir(new_folder):
-        os.makedirs(new_folder)
+        if not b_only_see_no_modify:
+            os.makedirs(new_folder)
 
     print(Fore.YELLOW + '番号数量: {0}'.format(len(old_paths)))
     for index, old_path in enumerate(old_paths):
         filename = os.path.split(old_path)[1]
         new_path = os.path.join(new_folder, filename)
+
+        if new_path == old_path:
+            continue
 
         count = index + 1
         print('{}{}'.format(str(count).ljust(5), old_path))
@@ -36,6 +46,11 @@ def move_actress_to_folder():
             os.rename(old_path, new_path)
 
 
+def move_all_actresses():
+    for actress_name in actress_names:
+        move_actress_to_folder(actress_name)
+
+
 if __name__ == '__main__':
     init(autoreset=True)
-    move_actress_to_folder()
+    move_all_actresses()

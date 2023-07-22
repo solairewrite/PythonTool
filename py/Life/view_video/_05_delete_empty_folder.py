@@ -9,10 +9,10 @@ import shutil
 
 # -------------------- 运行前设置的变量 -----------------------
 # 要读取的根目录
-folder = os.path.join(porn_root_folder, '65')
+folder = os.path.join(porn_root_folder, '73')
 b_only_see_no_modify = 0
 # 小于此大小MB的文件夹才会被删除
-max_folder_size = 3
+max_folder_size = 30
 
 # -------------------- 缓存变量 -----------------------
 porn_numbers = list()
@@ -67,7 +67,7 @@ def get_folders_contain_num():
             intsize = int(size)
             # print(color + '{0}{1}{2}{3}'.format(
             #     str(index).ljust(3), folder_num.ljust(4), (str(intsize) + 'MB').ljust(7), sub_folder))
-            if video_out and size < max_folder_size:
+            if video_out or size < max_folder_size:
                 folders_video_out.append(sub_folder)
     return sub_folders, folders_video_out
 

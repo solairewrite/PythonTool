@@ -118,6 +118,8 @@ def stat_names(b_stat_names=True, b_stat_chars=False):
             end = (index + 1) % 10 == 0 and '\n' or '\t'
             # 打印名字出现次数
             print('{0} : {1}'.format(name, count).ljust(12), end=end)
+            # if count >= 5:
+            #     print('\'{0}\', '.format(name), end=end)
 
     if b_stat_chars:
         char_dict = dict()
@@ -150,14 +152,14 @@ def print_old_names():
 
 if __name__ == '__main__':
     init(autoreset=True)
-    for i in range(11, 29):
-        sub_folder = os.path.join(porn_root_folder, str(i))
-        if os.path.isdir(sub_folder):
-            print(str(i) + '-' * 50)
-            print_folder_has_actress(sub_folder)
-            print()
+    # for i in range(11, 29):
+    #     sub_folder = os.path.join(porn_root_folder, str(i))
+    #     if os.path.isdir(sub_folder):
+    #         print(str(i) + '-' * 50)
+    #         print_folder_has_actress(sub_folder)
+    #         print()
 
     # print_duplicate_names()
-    # stat_names()
+    stat_names()
     # get_all_japanese_porns(True)
     # print_old_names()
