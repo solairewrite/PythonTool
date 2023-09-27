@@ -4,7 +4,7 @@
 
 import os
 from colorama import init, Fore
-from porn_tool import av_actress_names, change_names, porn_root_folder
+from _00_porn_tool import av_actress_names, change_names, porn_root_folder
 
 
 # 遍历文件夹中所有文件,每行打印5个文件名,并按照是否有女优名字区分颜色

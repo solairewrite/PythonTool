@@ -7,10 +7,10 @@ from colorama import init, Fore
 import chardet
 import re
 from zhconv import convert
-from porn_tool import porn_pattern, porn_root_folder
+from _00_porn_tool import porn_pattern, porn_root_folder
 
 # -------------------- 运行前设置的变量 -----------------------
-path = folder = os.path.join(porn_root_folder, '72')
+path = folder = os.path.join(porn_root_folder, '46')
 filepath_with_actress = 'C:\\Users\\jizhixin\\Desktop\\AV.txt'
 only_see_no_modify = 0
 

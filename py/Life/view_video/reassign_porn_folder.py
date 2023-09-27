@@ -5,7 +5,7 @@
 import os
 from colorama import init, Fore
 import random
-from porn_tool import video_types, porn_root_folder
+from _00_porn_tool import video_types, porn_root_folder
 
 # -------------------- 运行前设置的变量 -----------------------
 # 要读取的根目录

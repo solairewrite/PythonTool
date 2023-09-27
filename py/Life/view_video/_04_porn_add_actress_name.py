@@ -1,11 +1,11 @@
 import os
 from colorama import init, Fore
-from py.Life.view_video.porn_tool import is_video_fullname, porn_root_folder
+from py.Life.view_video._00_porn_tool import is_video_fullname, porn_root_folder
 
-folder = os.path.join(porn_root_folder, '70')
+folder = os.path.join(porn_root_folder, '47')
 
 bModify = 1
-actress_name = '白石茉莉奈'
+actress_name = '西宫梦'
 
 
 def read_folder(inpath):
@@ -20,6 +20,7 @@ def read_folder(inpath):
 
             if actress_name not in filename:
                 filename = filename + ' ' + actress_name
+                filename = str(filename).upper()
 
                 new_path = folder + '\\' + filename + end
                 print(color + '{} {} -> {}'.format(str(index).ljust(3), sub_path.ljust(30), new_path))

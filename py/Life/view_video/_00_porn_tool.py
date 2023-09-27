@@ -33,6 +33,7 @@ av_actress_names = [
     '七森莉莉', '小蕾', '河南实里', '蓝川美夏', '盐见彩', '南条一香', '鹫尾芽衣', '恋渊桃菜', '神纳花',
     '花宫丽', '仓本堇', '星乃夏月', '田中宁宁', '广濑雏', '五芭', '九野雏乃', '枢木葵', '青空光', '星乃莉子',
     '新村朱里', '土屋奏', '有村希', '森莓莉', '美园和花', '大槻响', '藤井一夜', '一条美绪', '爱弓凉', '高桥圣子',
+    '名里䌷'
 ]
 
 change_names = {
@@ -42,7 +43,7 @@ change_names = {
     '塩見彩': '盐见彩', '新有菜': '桥本有菜', '蝶花恋': '楪可怜', '楪花恋': '楪可怜',
     '七泽米亚': '七泽美亚', '神木麗': '神木丽', '白桃はな': '白桃花', '神納花': '神纳花',
     '大槻ひびき': '大槻响', '愛乃娜美': '爱乃娜美', '小宵こなん': '小宵虎南', 'RION': 'Rion',
-    '藤井いよな': '藤井一夜', '宮下玲奈': '宫下玲奈',
+    '藤井いよな': '藤井一夜', '宮下玲奈': '宫下玲奈', '明里紬': '名里䌷'
 }
 
 
@@ -136,7 +137,8 @@ def get_all_folder_actress_path(actress_name):
     paths = list()
 
     for sub_folder_name in os.listdir(root_folder):
-        if not sub_folder_name.startswith('Anim') \
+        if not sub_folder_name == actress_name \
+                and not sub_folder_name.startswith('Anim') \
                 and not sub_folder_name.startswith('USA') \
                 and not sub_folder_name.startswith('SM'):
             sub_folder = os.path.join(root_folder, sub_folder_name)

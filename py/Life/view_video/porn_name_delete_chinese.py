@@ -4,7 +4,7 @@
 
 import os
 from colorama import init, Fore
-from porn_tool import porn_root_folder
+from _00_porn_tool import porn_root_folder
 
 folder = os.path.join(porn_root_folder, '24')
 
