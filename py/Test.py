@@ -34,8 +34,14 @@ def change_actress_name():
         os.rename(old, new)
 
 
+def test():
+    for item in os.listdir('D:\Learn\CLionLib'):
+        print(item)
+
+
 if __name__ == '__main__':
     init(autoreset=True)
-    doit()
+    # doit()
     # change_actress_name()
     # print(convert('八掛海', 'zh-cn'))
+    test()

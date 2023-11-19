@@ -4,12 +4,12 @@
 
 import os
 from colorama import init, Fore
-from _00_porn_tool import get_porn_number, get_all_folder_porn_number
+from _00_porn_tool import get_porn_number, get_all_folder_porn_number, av_txt
 import chardet
 import webbrowser
 
-av_txt = 'C:\\Users\\jizhixin\\Desktop\\AV.txt'
-torrent_kitty_url = 'https://torrentkitty.tv/search/'
+# torrent_kitty_url = 'https://torrentkitty.tv/search/'
+torrent_kitty_url = 'https://www.torkitty.net/search/'
 
 start_line = 0  # AV.txt打开网页的起始行数
 end_line = 30  # 包含行号为end_line的这一行

@@ -8,7 +8,7 @@ from _00_porn_tool import is_video_fullpath, not_video_types, porn_root_folder
 
 # -------------------- 运行前设置的变量 -----------------------
 # 要读取的根目录
-folder = os.path.join(porn_root_folder, '47')
+folder = os.path.join(porn_root_folder, '_X 筱田优')
 b_only_see_no_modify = 0
 b_delete_none_video = 0
 

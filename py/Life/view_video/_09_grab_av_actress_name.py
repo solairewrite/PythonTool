@@ -10,7 +10,7 @@ from zhconv import convert
 from _00_porn_tool import porn_pattern, porn_root_folder
 
 # -------------------- 运行前设置的变量 -----------------------
-path = folder = os.path.join(porn_root_folder, '46')
+path = folder = os.path.join(porn_root_folder, '51')
 filepath_with_actress = 'C:\\Users\\jizhixin\\Desktop\\AV.txt'
 only_see_no_modify = 0
 

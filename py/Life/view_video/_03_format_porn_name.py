@@ -9,7 +9,7 @@ from _00_porn_tool import redirect_av_actress_name, is_video_fullname, porn_root
 from zhconv import convert
 
 # -------------------- 运行前设置的变量 -----------------------
-folder = os.path.join(porn_root_folder, '47')
+folder = os.path.join(porn_root_folder, '_X 筱田优')
 only_see_no_modify = 0
 # 只打印有修改的名字
 only_print_change_name = 0
@@ -28,7 +28,7 @@ delete_starts = [
     'freedl.org@', 'aavv333.com@', 'AVAV-66.XYZ@', 'XAVLT.COM@',
     'AVAV-55.XYZ@', 'avav66.xyz@', 'avav55.xyz@', 'avav77.xyz@', 'avav77.xyz',
     'GG5.CO@', 'gg5.co@', 'GG-5.CO@', 'AAVV-36.XYZ@', 'avav36.xyz@', 'aavv36.xyz@',
-    'AAVV-36.XYZ@'
+    'AAVV-36.XYZ@', '@JNTY-60.APP_', 'AAVV-38.XYZ@', 'aavv37.xyz@', 'aavv38.xyz@'
 ]
 
 delete_ends = [
@@ -36,7 +36,7 @@ delete_ends = [
     '-HD', '_', '.', '_HD_CH', '-FHD', '-C', 'c', '~nyap2p.com', 'ch',
     '_CH-nyap2p.com', '.SD', '(Uncensored Leaked)', '-uncensored-nyap2p.com',
     '-uncensored', '.HD', '_1080', '-C_GG5', 'C-U', '-U', '-u', '-nyap2p.com',
-    'IPZZ-069-NYAP2P.COM',
+    'IPZZ-069-NYAP2P.COM', '_60FPS',
 
 ]
 
