@@ -7,7 +7,7 @@ from colorama import init, Fore
 from xpinyin import Pinyin
 from _00_porn_tool import porn_root_folder
 
-b_only_see_no_modify = 0
+b_only_see_no_modify = 1
 
 
 def str_add_first_char(instr):

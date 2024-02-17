@@ -16,6 +16,7 @@ class LinkMode(Enum):
 # --------------------运行前需要设置的参数--------------------
 # 网址,仅只支持1024
 url = 'https://a227h.xyz/pw/thread.php?fid=3'
+url = 'https://a227h.work/pw/thread.php?fid=3&page=3'
 link_mode = LinkMode.OPEN_BY_TYPE  # 打开链接的模式
 page_start = 1  # 打开第几页,从1开始
 page_num = 1  # 打开多少页

@@ -5,9 +5,9 @@
 import os
 from colorama import init, Fore
 import chardet
-from py.Life.view_video._00_porn_tool import get_folder_porn_number, av_txt, porn_root_folder, get_porn_number
+from py.Life.view_video._00_porn_tool import get_folder_porn_number, av_txt, porn_root_folder, get_porn_number, current_folder
 
-downloaded_folder = '_X 筱田优'
+downloaded_folder = current_folder
 
 
 # 获取下载好的番号

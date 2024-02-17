@@ -150,6 +150,19 @@ def print_old_names():
         print(item)
 
 
+def get_subfolders():
+    for item1 in os.listdir(porn_root_folder):
+        subitem1 = os.path.join(porn_root_folder, item1)
+        if os.path.isdir(subitem1):
+            num = len(os.listdir(subitem1))
+            print('{} {}'.format(str(num).ljust(3), subitem1))
+            for item2 in os.listdir(subitem1):
+                subitem2 = os.path.join(subitem1, item2)
+                if os.path.isdir(subitem2):
+                    # print(subitem1, subitem2)
+                    pass
+
+
 if __name__ == '__main__':
     init(autoreset=True)
     # for i in range(11, 29):
@@ -160,6 +173,7 @@ if __name__ == '__main__':
     #         print()
 
     # print_duplicate_names()
-    stat_names()
+    # stat_names()
     # get_all_japanese_porns(True)
     # print_old_names()
+    get_subfolders()

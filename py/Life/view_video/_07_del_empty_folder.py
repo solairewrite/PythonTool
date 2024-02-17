@@ -1,6 +1,6 @@
 # Author        : jizhixin
 # Date          : 2023-07-23
-# Description   : 
+# Description   : 删除1-100文件夹中的空文件夹
 
 import os
 from colorama import init, Fore

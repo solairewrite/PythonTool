@@ -5,11 +5,11 @@
 import os
 from colorama import init, Fore
 from enum import Enum
-from _00_porn_tool import redirect_av_actress_name, is_video_fullname, porn_root_folder
+from _00_porn_tool import redirect_av_actress_name, is_video_fullname, porn_root_folder, current_folder
 from zhconv import convert
 
 # -------------------- 运行前设置的变量 -----------------------
-folder = os.path.join(porn_root_folder, '_X 筱田优')
+folder = os.path.join(porn_root_folder, current_folder)
 only_see_no_modify = 0
 # 只打印有修改的名字
 only_print_change_name = 0
@@ -28,7 +28,10 @@ delete_starts = [
     'freedl.org@', 'aavv333.com@', 'AVAV-66.XYZ@', 'XAVLT.COM@',
     'AVAV-55.XYZ@', 'avav66.xyz@', 'avav55.xyz@', 'avav77.xyz@', 'avav77.xyz',
     'GG5.CO@', 'gg5.co@', 'GG-5.CO@', 'AAVV-36.XYZ@', 'avav36.xyz@', 'aavv36.xyz@',
-    'AAVV-36.XYZ@', '@JNTY-60.APP_', 'AAVV-38.XYZ@', 'aavv37.xyz@', 'aavv38.xyz@'
+    'AAVV-36.XYZ@', '@JNTY-60.APP_', 'AAVV-38.XYZ@', 'aavv37.xyz@', 'aavv38.xyz@',
+    'WOXAV.COM@', 'GC-2048.COM@', 'gc2048.com@', '@', 'AAVV-36.XYZ@', 'JN-899.VIP_',
+    'AAVV-36.XYZ@', 'AAXV.XYZ-', 'JNTY-60.APP_', 'kcf9.com@', 'JNTY-60.APP_',
+    '-ES', '@jnty60.app_', 'aavv39.xyz@', 'AAVV-39.XYZ@'
 ]
 
 delete_ends = [
@@ -36,8 +39,8 @@ delete_ends = [
     '-HD', '_', '.', '_HD_CH', '-FHD', '-C', 'c', '~nyap2p.com', 'ch',
     '_CH-nyap2p.com', '.SD', '(Uncensored Leaked)', '-uncensored-nyap2p.com',
     '-uncensored', '.HD', '_1080', '-C_GG5', 'C-U', '-U', '-u', '-nyap2p.com',
-    'IPZZ-069-NYAP2P.COM', '_60FPS',
-
+    'IPZZ-069-NYAP2P.COM', '_60FPS', '.H265', '-UC', '-720p-HEVC', '-720P-HEVC',
+    '-AI', 'CB', 'Z'
 ]
 
 # -------------------- 缓存变量 -----------------------
