@@ -7,11 +7,11 @@ from colorama import init, Fore
 import chardet
 import re
 from zhconv import convert
-from _00_porn_tool import porn_pattern, porn_root_folder
+from _00_porn_tool import porn_pattern, porn_root_folder, current_folder, av_txt, video_types
 
 # -------------------- 运行前设置的变量 -----------------------
-path = folder = os.path.join(porn_root_folder, '48')
-filepath_with_actress = 'C:\\Users\\jizhixin\\Desktop\\AV.txt'
+path = folder = os.path.join(porn_root_folder, current_folder)
+filepath_with_actress = av_txt
 only_see_no_modify = 0
 
 # -------------------- 缓存变量 -----------------------
@@ -65,6 +65,8 @@ def change_porn_names():
         filename = os.path.split(fullpath)[1]
         # old_name: ABP-747, file_type: .mp4
         old_name, file_type = os.path.splitext(filename)
+        if not file_type in video_types:
+            continue
         new_name = get_name_with_av_actress(old_name)
         old_path = os.path.join(path, old_name) + file_type
         new_path = os.path.join(path, new_name) + file_type

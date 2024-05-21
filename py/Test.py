@@ -2,9 +2,9 @@ import os
 from colorama import init, Fore
 from zhconv import convert
 
-folder = 'E:\\Movie\\Clannad\\[DBD-Raws][CLANNAD AFTER STORY][01-22TV全集+OVA+特别篇+总集篇][1080P][BDRip][HEVC-10bit][简繁字幕外挂][FLAC][MKV]'
-new_foler = 'E:\\Movie\\Clannad'
-b_only_see_no_modify = 1
+folder = 'E:\\Movie\\老友记.全10季.Friends.1080p.NF.WEB-DL.DDP5.1.x264-DHTCLUB\\老友记.第十季.Friends.S10.1080p.NF.WEB-DL.DDP5.1.x264-DHTCLUB'
+new_foler = 'E:\\Movie\\老友记 S10'
+b_only_see_no_modify = 0
 
 
 def doit():
@@ -14,8 +14,8 @@ def doit():
         #     continue
         old_name: str = os.path.splitext(item)[0]
         old_type = os.path.splitext(item)[1]
-        if old_type != '.ass' or old_name.endswith('.tc'):
-            continue
+        # if old_type != '.ass' or old_name.endswith('.tc'):
+        #     continue
 
         old_path = os.path.join(folder, item)
         if os.path.isfile(old_path):
@@ -25,7 +25,7 @@ def doit():
                 continue
             # index = episode - 1
             numstr = episode < 10 and '0{}'.format(episode) or str(episode)
-            new_name = 'Clannad S2 E{}'.format(numstr)
+            new_name = '老友记 S10 E{}'.format(numstr)
             new_path = os.path.join(new_foler, new_name) + old_type
             print(old_path)
             print(Fore.YELLOW + new_path)

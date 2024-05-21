@@ -7,7 +7,7 @@ from colorama import init, Fore
 import re
 
 porn_root_folder = 'F:\\Porn'
-current_folder = '79'
+current_folder = '88'
 av_txt = 'C:\\Users\\jizhixin\\Desktop\\AV.txt'
 
 test_folder = os.path.join(porn_root_folder, '2')
@@ -146,6 +146,37 @@ def get_all_folder_actress_path(actress_name):
             sub_folder = os.path.join(root_folder, sub_folder_name)
             if os.path.isdir(sub_folder):
                 get_folder_all_actress_path(sub_folder, paths, actress_name)
+
+    # print(Fore.YELLOW + '番号数量: {0}'.format(len(paths)))
+    # for i, item in enumerate(paths):
+    #     count = i + 1
+    #     print('{} {}'.format(str(count).ljust(5), item))
+    #     if count % 10 == 0:
+    #         print()
+
+    return paths
+
+
+# 获取一个文件夹下所有指定番号系列的视频的路径
+def get_folder_all_codetype_path(folder, inlist, codetype):
+    for fullname in os.listdir(folder):
+        if is_video_fullname(fullname):
+            if re.search(codetype, fullname, re.IGNORECASE):
+                inlist.append(os.path.join(folder, fullname))
+
+
+# 获取porn文件夹下所有指定番号系列的视频的路径
+def get_all_folder_codetype_path(codetype):
+    root_folder = porn_root_folder
+    paths = list()
+
+    for sub_folder_name in os.listdir(root_folder):
+        if codetype not in sub_folder_name \
+                and not sub_folder_name.startswith('Anim') \
+                and not sub_folder_name.startswith('USA'):
+            sub_folder = os.path.join(root_folder, sub_folder_name)
+            if os.path.isdir(sub_folder):
+                get_folder_all_codetype_path(sub_folder, paths, codetype)
 
     # print(Fore.YELLOW + '番号数量: {0}'.format(len(paths)))
     # for i, item in enumerate(paths):

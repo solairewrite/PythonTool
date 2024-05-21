@@ -9,10 +9,11 @@ import chardet
 import webbrowser
 
 # torrent_kitty_url = 'https://torrentkitty.tv/search/'
-torrent_kitty_url = 'https://www.torkitty.net/search/'
+# torrent_kitty_url = 'https://www.torkitty.net/search/'
+torrent_kitty_url = 'https://torkitty.com/search/'
 
 start_line = 0  # AV.txt打开网页的起始行数
-end_line = 10  # 包含行号为end_line的这一行
+end_line = 30  # 包含行号为end_line的这一行
 bonly_VIP = 0  # 仅下载标记为!的重要番号
 
 

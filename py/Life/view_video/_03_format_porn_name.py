@@ -10,6 +10,7 @@ from zhconv import convert
 
 # -------------------- 运行前设置的变量 -----------------------
 folder = os.path.join(porn_root_folder, current_folder)
+# folder = os.path.join(porn_root_folder, 'SM 01')
 only_see_no_modify = 0
 # 只打印有修改的名字
 only_print_change_name = 0
@@ -31,7 +32,7 @@ delete_starts = [
     'AAVV-36.XYZ@', '@JNTY-60.APP_', 'AAVV-38.XYZ@', 'aavv37.xyz@', 'aavv38.xyz@',
     'WOXAV.COM@', 'GC-2048.COM@', 'gc2048.com@', '@', 'AAVV-36.XYZ@', 'JN-899.VIP_',
     'AAVV-36.XYZ@', 'AAXV.XYZ-', 'JNTY-60.APP_', 'kcf9.com@', 'JNTY-60.APP_',
-    '-ES', '@jnty60.app_', 'aavv39.xyz@', 'AAVV-39.XYZ@'
+    '-ES', '@jnty60.app_', 'aavv39.xyz@', 'AAVV-39.XYZ@', 'WoXav.Com@'
 ]
 
 delete_ends = [
@@ -40,7 +41,7 @@ delete_ends = [
     '_CH-nyap2p.com', '.SD', '(Uncensored Leaked)', '-uncensored-nyap2p.com',
     '-uncensored', '.HD', '_1080', '-C_GG5', 'C-U', '-U', '-u', '-nyap2p.com',
     'IPZZ-069-NYAP2P.COM', '_60FPS', '.H265', '-UC', '-720p-HEVC', '-720P-HEVC',
-    '-AI', 'CB', 'Z'
+    '-AI', 'CB', 'Z', '.FHD', '- UC', '_000^WM'
 ]
 
 # -------------------- 缓存变量 -----------------------
