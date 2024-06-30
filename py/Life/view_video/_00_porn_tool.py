@@ -7,7 +7,7 @@ from colorama import init, Fore
 import re
 
 porn_root_folder = 'F:\\Porn'
-current_folder = '88'
+current_folder = '90'
 av_txt = 'C:\\Users\\jizhixin\\Desktop\\AV.txt'
 
 test_folder = os.path.join(porn_root_folder, '2')

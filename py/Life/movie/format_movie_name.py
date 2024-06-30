@@ -4,39 +4,46 @@
 
 import os
 from colorama import init, Fore
+import re
 
-folder = 'E:\\movie\\为美好的世界献上祝福 S02'
+folder = 'E:\\Movie\\无耻家庭'
+movie_name = '无耻家庭'
+season_pattern = r'S\d{2}'
+episode_pattern = r'E\d{2}'
 
 bModify = 1
 
 
-def get_episode(season_eipsode: str):
-    episode = int(season_eipsode.split('E')[1])
-    return episode < 10 and '0' + str(episode) or str(episode)
+def get_episode(filename: str):
+    season_reg = re.search(season_pattern, filename)
+    season_tuple = season_reg.span()
+    season_str = filename[season_tuple[0]: season_tuple[1]]
+
+    episode_reg = re.search(episode_pattern, filename)
+    episode_tuple = episode_reg.span()
+    episode_str = filename[episode_tuple[0]: episode_tuple[1]]
+
+    result = '{0} {1}'.format(season_str, episode_str)
+    return result
 
 
-def read_folder(inpath):
-    for index, item in enumerate(os.listdir(inpath)):
-        # if '生活大爆炸' not in item:
-        #     continue
-        # if index >= 16:
-        #     continue
-        sub_path = os.path.join(inpath, item)
-        if os.path.isfile(sub_path):
-            color = ''
+def read_folder(infolder):
+    for index, item in enumerate(os.listdir(infolder)):
+        old_path = os.path.join(infolder, item)
+        if os.path.isfile(old_path):
             filename, end = os.path.splitext(item)
-            # if filename.startswith('The.Big.Bang.Theory.'):
-            #     se = filename.replace('The.Big.Bang.Theory.', '').replace('.2017.1080p.BluRay.x265.10bit.AC3-BitsTV', '')
-            # episode = get_episode(se)
-            # print('{} -> {}'.format(se, num))
-            num = index
-            episode = num + 1 < 10 and '0' + str(num + 1) or str(num + 1)
-            filename = '为美好的世界献上祝福 S02 E{0}'.format(episode)
-            # filename = filename.lstrip('The.Big.Bang.Theory.')
-            new_path = folder + '\\' + filename + end
-            print(color + '{} {} \n->  {}'.format(str(index).ljust(3), sub_path.ljust(30), new_path))
-            if bModify:
-                os.rename(sub_path, new_path)
+
+            episode = get_episode(filename)
+            new_filename = '{0} {1}'.format(movie_name, episode)
+            new_path = os.path.join(infolder, new_filename + end)
+
+            if old_path != new_path:
+                print()
+                print(old_path)
+                print(Fore.YELLOW + new_path)
+
+                if bModify:
+                    os.rename(old_path, new_path)
 
 
 if __name__ == '__main__':
