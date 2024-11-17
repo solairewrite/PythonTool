@@ -32,7 +32,9 @@ delete_starts = [
     'AAVV-36.XYZ@', '@JNTY-60.APP_', 'AAVV-38.XYZ@', 'aavv37.xyz@', 'aavv38.xyz@',
     'WOXAV.COM@', 'GC-2048.COM@', 'gc2048.com@', '@', 'AAVV-36.XYZ@', 'JN-899.VIP_',
     'AAVV-36.XYZ@', 'AAXV.XYZ-', 'JNTY-60.APP_', 'kcf9.com@', 'JNTY-60.APP_',
-    '-ES', '@jnty60.app_', 'aavv39.xyz@', 'AAVV-39.XYZ@', 'WoXav.Com@'
+    '-ES', '@jnty60.app_', 'aavv39.xyz@', 'AAVV-39.XYZ@', 'WoXav.Com@', 'kfa55.com@',
+    'r18ss.com@', 'r18ss.com-', 'TX4k.com-', 'kfa11.com@', 'aavv40.xyz@',
+    '无码、无修正、UNCENSORED ', '2048.info@', '2048.INFO@'
 ]
 
 delete_ends = [
@@ -41,7 +43,7 @@ delete_ends = [
     '_CH-nyap2p.com', '.SD', '(Uncensored Leaked)', '-uncensored-nyap2p.com',
     '-uncensored', '.HD', '_1080', '-C_GG5', 'C-U', '-U', '-u', '-nyap2p.com',
     'IPZZ-069-NYAP2P.COM', '_60FPS', '.H265', '-UC', '-720p-HEVC', '-720P-HEVC',
-    '-AI', 'CB', 'Z', '.FHD', '- UC', '_000^WM'
+    '-AI', 'CB', 'Z', '.FHD', '- UC', '_000^WM', '-1080P', '-1080p'
 ]
 
 # -------------------- 缓存变量 -----------------------
@@ -101,7 +103,9 @@ def get_formatted_name(old_name):
         elif char.isdigit():
             current_type = CharType.Digit
 
-        if current_type == CharType.Digit and last_type == CharType.Alpha:
+        if (current_type == CharType.Digit and last_type == CharType.Alpha
+                and ''.join(chars[i - 2: i + 1]) != 'FC2'):
+            # print(chars[i - 2: i + 1])
             # print('need change', end=' ')
             chars.insert(i, '-')
             i += 1

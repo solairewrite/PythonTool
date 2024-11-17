@@ -5,7 +5,7 @@ from py.Life.view_video._00_porn_tool import is_video_fullname, porn_root_folder
 folder = os.path.join(porn_root_folder, current_folder)
 
 bModify = 1
-actress_name = '友田彩也香'
+actress_name = '天然美月'
 
 
 def read_folder(inpath):

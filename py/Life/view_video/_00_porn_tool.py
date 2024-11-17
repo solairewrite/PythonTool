@@ -6,8 +6,13 @@ import os
 from colorama import init, Fore
 import re
 
-porn_root_folder = 'F:\\Porn'
-current_folder = '90'
+# porn_root_folder = 'F:\\Porn'
+porn_root_folder = 'E:\\Porn2'
+porn_root_folders = [
+    'F:\\Porn',
+    'E:\\Porn2',
+]
+current_folder = '06'
 av_txt = 'C:\\Users\\jizhixin\\Desktop\\AV.txt'
 
 test_folder = os.path.join(porn_root_folder, '2')
@@ -18,7 +23,8 @@ not_video_types = ['.torrent']
 
 # 番号正则表达式
 # porn_pattern = r'^[a-zA-z]{2,5}-[0-9]{3,4}(-[0-9])?' # 匹配最后表示上下集的-1
-porn_pattern = r'^[a-zA-z]{2,5}-[0-9]{3,4}'
+# porn_pattern = r'^[a-zA-z]{2,5}-[0-9]{3,4}'
+porn_pattern = r'(^[a-zA-z]{2,5}-[0-9]{3,4})|(^FC2-[0-9]{7})'  # 匹配素人FC2-2386297
 
 av_actress_names = [
     '明里紬', '川北爱咲', '吉高宁宁', '桃乃木香奈', '神宫寺奈绪', '小松杏', '神乐爱音', '八木奈奈',
@@ -96,15 +102,15 @@ def get_folder_porn_number(path, inlist):
 
 # 获取porn文件夹下所有日本文件夹下的番号
 def get_all_folder_porn_number():
-    root_folder = porn_root_folder
     all_porn_numbers = list()
 
-    for sub_folder_name in os.listdir(root_folder):
-        if not sub_folder_name.startswith('Anim') and not sub_folder_name.startswith('USA'):
-            sub_folder = os.path.join(root_folder, sub_folder_name)
-            if os.path.isdir(sub_folder):
-                # print(str(i).ljust(3) + '-' * 30)
-                get_folder_porn_number(sub_folder, all_porn_numbers)
+    for root_folder in porn_root_folders:
+        for sub_folder_name in os.listdir(root_folder):
+            if not sub_folder_name.startswith('Anim') and not sub_folder_name.startswith('USA'):
+                sub_folder = os.path.join(root_folder, sub_folder_name)
+                if os.path.isdir(sub_folder):
+                    # print(str(i).ljust(3) + '-' * 30)
+                    get_folder_porn_number(sub_folder, all_porn_numbers)
 
     all_porn_numbers.sort()
     print(Fore.YELLOW + '番号数量: {0}'.format(len(all_porn_numbers)))

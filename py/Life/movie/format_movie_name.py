@@ -15,11 +15,11 @@ bModify = 1
 
 
 def get_episode(filename: str):
-    season_reg = re.search(season_pattern, filename)
+    season_reg = re.search(season_pattern, filename, re.IGNORECASE)
     season_tuple = season_reg.span()
     season_str = filename[season_tuple[0]: season_tuple[1]]
 
-    episode_reg = re.search(episode_pattern, filename)
+    episode_reg = re.search(episode_pattern, filename, re.IGNORECASE)
     episode_tuple = episode_reg.span()
     episode_str = filename[episode_tuple[0]: episode_tuple[1]]
 
