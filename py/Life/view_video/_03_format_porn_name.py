@@ -34,7 +34,7 @@ delete_starts = [
     'AAVV-36.XYZ@', 'AAXV.XYZ-', 'JNTY-60.APP_', 'kcf9.com@', 'JNTY-60.APP_',
     '-ES', '@jnty60.app_', 'aavv39.xyz@', 'AAVV-39.XYZ@', 'WoXav.Com@', 'kfa55.com@',
     'r18ss.com@', 'r18ss.com-', 'TX4k.com-', 'kfa11.com@', 'aavv40.xyz@',
-    '无码、无修正、UNCENSORED ', '2048.info@', '2048.INFO@'
+    '无码、无修正、UNCENSORED ', '2048.info@', '2048.INFO@', 'javbt.net_'
 ]
 
 delete_ends = [
@@ -43,7 +43,7 @@ delete_ends = [
     '_CH-nyap2p.com', '.SD', '(Uncensored Leaked)', '-uncensored-nyap2p.com',
     '-uncensored', '.HD', '_1080', '-C_GG5', 'C-U', '-U', '-u', '-nyap2p.com',
     'IPZZ-069-NYAP2P.COM', '_60FPS', '.H265', '-UC', '-720p-HEVC', '-720P-HEVC',
-    '-AI', 'CB', 'Z', '.FHD', '- UC', '_000^WM', '-1080P', '-1080p'
+    '-AI', 'CB', 'Z', '.FHD', '- UC', '_000^WM', '-1080P', '-1080p', 'J', 'S'
 ]
 
 # -------------------- 缓存变量 -----------------------

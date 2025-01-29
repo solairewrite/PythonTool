@@ -15,8 +15,9 @@ import time
 # gas_doc_path = 'E:\\Learn\\Lyra\\Source'
 # gas_doc_path = 'E:\\Learn\\Lyra\\Plugins'
 # gas_doc_path = 'E:\\Learn\\Lyra\\Plugins\\GameFeatures'
-gas_doc_path = 'E:\\Learn\\Lyra\\Plugins\\GameFeatures\\ShooterCore'
-path = gas_doc_path
+# gas_doc_path = 'E:\\Learn\\Lyra\\Plugins\\GameFeatures\\ShooterCore'
+# path = 'C:\\UE5.4\\UnrealEngine\\Engine\\Plugins\\Experimental\\Chooser\\Source'
+path = 'C:\\UE5.4\\UnrealEngine\\Engine\\Plugins\\Animation\\PoseSearch\\Source'
 # 要统计的文件类型
 filetypes = [
     '.h',

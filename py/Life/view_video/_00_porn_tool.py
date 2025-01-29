@@ -12,7 +12,7 @@ porn_root_folders = [
     'F:\\Porn',
     'E:\\Porn2',
 ]
-current_folder = '06'
+current_folder = '10'
 av_txt = 'C:\\Users\\jizhixin\\Desktop\\AV.txt'
 
 test_folder = os.path.join(porn_root_folder, '2')
