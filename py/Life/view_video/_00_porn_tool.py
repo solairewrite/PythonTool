@@ -12,13 +12,13 @@ porn_root_folders = [
     'F:\\Porn',
     'E:\\Porn2',
 ]
-current_folder = '10'
+current_folder = '15'
 av_txt = 'C:\\Users\\jizhixin\\Desktop\\AV.txt'
 
 test_folder = os.path.join(porn_root_folder, '2')
 test_name = 'ABP-989 小女人'
 
-video_types = ['.mp4', '.mkv', '.avi', '.MP4', '.mpg', '.wmv']
+video_types = ['.mp4', '.mkv', '.avi', '.MP4', '.mpg', '.wmv', '.rmvb']
 not_video_types = ['.torrent']
 
 # 番号正则表达式

@@ -82,10 +82,14 @@ def del_folders_video_out():
             shutil.rmtree(remove_path)
 
 
-if __name__ == '__main__':
-    init(autoreset=True)
+def main():
     # get_folder_porn_number(folder, porn_numbers)
     # for index, item in enumerate(porn_numbers):
     #     print('{0}{1}'.format(str(index).ljust(3), item))
     # sub_folders, folders_video_out = get_folders_contain_num()
     del_folders_video_out()
+
+
+if __name__ == '__main__':
+    init(autoreset=True)
+    main()

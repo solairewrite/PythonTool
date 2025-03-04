@@ -34,7 +34,7 @@ delete_starts = [
     'AAVV-36.XYZ@', 'AAXV.XYZ-', 'JNTY-60.APP_', 'kcf9.com@', 'JNTY-60.APP_',
     '-ES', '@jnty60.app_', 'aavv39.xyz@', 'AAVV-39.XYZ@', 'WoXav.Com@', 'kfa55.com@',
     'r18ss.com@', 'r18ss.com-', 'TX4k.com-', 'kfa11.com@', 'aavv40.xyz@',
-    '无码、无修正、UNCENSORED ', '2048.info@', '2048.INFO@', 'javbt.net_'
+    '无码、无修正、UNCENSORED ', '2048.info@', '2048.INFO@', 'javbt.net_', 'dccdom.com@',
 ]
 
 delete_ends = [
@@ -175,10 +175,14 @@ def change_porn_name_in_folder(infolder):
         print(Fore.YELLOW + '修改了 {} 个文件'.format(change_num))
 
 
-if __name__ == '__main__':
-    init(autoreset=True)
+def main():
     # for i in range(1, 30):
     #     sub_folder = os.path.join(folder, str(i))
     #     print('{} {}'.format(sub_folder, '-' * 30))
     #     change_porn_name_in_folder(sub_folder)
     change_porn_name_in_folder(folder)
+
+
+if __name__ == '__main__':
+    init(autoreset=True)
+    main()

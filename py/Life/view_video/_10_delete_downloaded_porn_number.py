@@ -46,6 +46,10 @@ def delete_downloaded_porn_numbers():
             file.write(line)
 
 
+def main():
+    delete_downloaded_porn_numbers()
+
+
 if __name__ == '__main__':
     init(autoreset=True)
-    delete_downloaded_porn_numbers()
+    main()

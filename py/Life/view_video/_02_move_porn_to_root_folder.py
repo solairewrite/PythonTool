@@ -54,9 +54,13 @@ def delete_none_video():
                     os.remove(fullpath)
 
 
-if __name__ == '__main__':
-    init(autoreset=True)
+def main():
     read_folder(folder)
     move_porn_to_root_folder()
     if b_delete_none_video:
         delete_none_video()
+
+
+if __name__ == '__main__':
+    init(autoreset=True)
+    main()

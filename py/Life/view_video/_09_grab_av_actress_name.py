@@ -86,10 +86,14 @@ def change_porn_names():
             os.rename(old_path, new_path)
 
 
-if __name__ == '__main__':
-    init(autoreset=True)
+def main():
     read_folder()
     read_file_with_actress()
     change_porn_names()
     if not only_see_no_modify:
         print(Fore.YELLOW + '修改了 {} 个文件'.format(change_num))
+
+
+if __name__ == '__main__':
+    init(autoreset=True)
+    main()
