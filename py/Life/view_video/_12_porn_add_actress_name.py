@@ -5,7 +5,7 @@ from py.Life.view_video._00_porn_tool import is_video_fullname, porn_root_folder
 folder = os.path.join(porn_root_folder, current_folder)
 
 bModify = 1
-actress_name = '天然美月'
+actress_name = '蓝芽水月'
 
 
 def read_folder(inpath):
@@ -19,7 +19,7 @@ def read_folder(inpath):
             filename, end = os.path.splitext(item)
 
             if actress_name not in filename:
-                filename = filename + ' ' + actress_name
+                filename = filename.strip() + ' ' + actress_name
                 filename = str(filename).upper()
 
                 new_path = folder + '\\' + filename + end

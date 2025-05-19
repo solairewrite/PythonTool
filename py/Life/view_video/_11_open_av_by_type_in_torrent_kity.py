@@ -13,8 +13,8 @@ torrent_kitty_url = 'https://www.torkitty.net/search/'
 # 2024-02-17 只搜到MISM-306
 # 3024-03-10 CMC-306
 # 2024-03-16 DASD-999
-av_type = "NEOB"
-start_num = 30
+av_type = "NTJ"
+start_num = 0
 count = 30
 end_num = start_num + count
 

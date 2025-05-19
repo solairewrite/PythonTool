@@ -17,13 +17,15 @@ import time
 # gas_doc_path = 'E:\\Learn\\Lyra\\Plugins\\GameFeatures'
 # gas_doc_path = 'E:\\Learn\\Lyra\\Plugins\\GameFeatures\\ShooterCore'
 # path = 'C:\\UE5.4\\UnrealEngine\\Engine\\Plugins\\Experimental\\Chooser\\Source'
-path = 'C:\\UE5.4\\UnrealEngine\\Engine\\Plugins\\Animation\\PoseSearch\\Source'
+# path = 'C:\\UE5.4\\UnrealEngine\\Engine\\Plugins\\Animation\\PoseSearch\\Source'
+path = 'D:\\UEProject\\DreamParadise\\Content\\Script\\Nagisa'
 # 要统计的文件类型
 filetypes = [
     '.h',
     '.cpp',
-    # '.py',
-    # '.cs'
+    '.py',
+    '.cs',
+    '.lua',
 ]
 # 是否打印所有文件类型
 b_print_all_file_types = True
