@@ -7,18 +7,12 @@ import chardet
 import time
 
 # ------------------------ 运行前设置的变量 ------------------------
-# 文件或文件夹路径
-# gas_doc_path = 'E:\\Learn\\UnrealTournament\\UnrealTournament\\Source\\UnrealTournament'
-# gas_doc_path = 'E:\\Learn\\GASShooter\\Source\\GASShooter'
-# gas_doc_path = 'E:\\Learn\\Lyra\\Source\\LyraGame'
-# gas_doc_path = 'E:\\Learn\\Lyra\\Source\\LyraEditor'
-# gas_doc_path = 'E:\\Learn\\Lyra\\Source'
-# gas_doc_path = 'E:\\Learn\\Lyra\\Plugins'
-# gas_doc_path = 'E:\\Learn\\Lyra\\Plugins\\GameFeatures'
-# gas_doc_path = 'E:\\Learn\\Lyra\\Plugins\\GameFeatures\\ShooterCore'
-# path = 'C:\\UE5.4\\UnrealEngine\\Engine\\Plugins\\Experimental\\Chooser\\Source'
-# path = 'C:\\UE5.4\\UnrealEngine\\Engine\\Plugins\\Animation\\PoseSearch\\Source'
-path = 'D:\\UEProject\\DreamParadise\\Content\\Script\\Nagisa'
+path_list: list[str] = [
+    # r'D:\UEProject\DreamParadise\Content\Script\Nagisa',
+    # r'G:\UnrealEngine\UE5.6\UnrealEngine\Engine\Plugins\Chooser\Source\Chooser',
+    r'G:\UnrealEngine\UE5.6\UnrealEngine\Engine\Plugins\Animation\BlendStack\Source\Runtime',
+]
+
 # 要统计的文件类型
 filetypes = [
     '.h',
@@ -83,17 +77,18 @@ def get_all_files(inpath, outlist):
 
 # 统计信息
 def stat_code():
-    tfiles = get_all_files(path, list())
-    for item in tfiles:
-        with open(item, 'rb') as tfile:
-            tencoding = chardet.detect(tfile.read())['encoding']
-        with open(item, 'r', encoding=tencoding, errors='ignore') as tfile:
-            linecount = 0
-            for _ in tfile:
-                linecount += 1
+    for path in path_list:
+        tfiles = get_all_files(path, list())
+        for item in tfiles:
+            with open(item, 'rb') as tfile:
+                tencoding = chardet.detect(tfile.read())['encoding']
+            with open(item, 'r', encoding=tencoding, errors='ignore') as tfile:
+                linecount = 0
+                for _ in tfile:
+                    linecount += 1
 
-        tinfo = CodeInfo(item, linecount)
-        code_infos.append(tinfo)
+            tinfo = CodeInfo(item, linecount)
+            code_infos.append(tinfo)
 
 
 # 排序函数

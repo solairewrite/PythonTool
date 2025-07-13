@@ -12,7 +12,7 @@ porn_root_folders = [
     'F:\\Porn',
     'E:\\Porn2',
 ]
-current_folder = '19'
+current_folder = '23'
 av_txt = 'C:\\Users\\jizhixin\\Desktop\\AV.txt'
 
 test_folder = os.path.join(porn_root_folder, '2')
@@ -24,7 +24,7 @@ not_video_types = ['.torrent']
 # 番号正则表达式
 # porn_pattern = r'^[a-zA-z]{2,5}-[0-9]{3,4}(-[0-9])?' # 匹配最后表示上下集的-1
 # porn_pattern = r'^[a-zA-z]{2,5}-[0-9]{3,4}'
-porn_pattern = r'(^[a-zA-z]{2,5}-[0-9]{3,4})|(^FC2-[0-9]{7})'  # 匹配素人FC2-2386297
+porn_pattern = r'(^[a-zA-z]{2,5}-[0-9]{3,4})|(^[Ff][Cc]2-[0-9]{7})'  # 匹配素人FC2-2386297
 
 av_actress_names = [
     '明里紬', '川北爱咲', '吉高宁宁', '桃乃木香奈', '神宫寺奈绪', '小松杏', '神乐爱音', '八木奈奈',
